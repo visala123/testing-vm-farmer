@@ -5,5 +5,5 @@ aws_region     = "ap-south-1"
 #aws_secret_key = "your-aws-secret-key"
 ec2_key_name   = "keypair"
 instance_type  = "t3.medium"
-ami_id         = "ami-084568db4383264d4"  # Ubuntu 20.04 LTS (for us-east-1)
+ami_id         = "ami-0e35ddab05955cf57"  # Ubuntu 20.04 LTS (for us-east-1)
 instance_name  = "Test-Farmer-Public-EC2"
