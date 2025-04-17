@@ -7,13 +7,12 @@ terraform {
   }
 
   resource "aws_s3_bucket" "my_bucket" {
-  bucket = "terraform-backend-remote-ec2-github-actions" # Must be globally unique
-   key    = "dev\terraform.tfstate"
-    region = "ap-northeast-2"
+  bucket = "terraform-backend-remote-vpc-github-actions"
+  acl    = "private"
 
   tags = {
-    Name        = "terraform-backend-remote-ec2-github-actions"
-   
+    Name        = "terraform-backend-remote-vpc-github-actions"
+    Environment = "Dev"
   }
 }
  /* backend "s3" {
