@@ -21,6 +21,7 @@ module "ec2_instance" {
 }
  resource "aws_s3_bucket" "my_bucket" {
   bucket = "terraform-backend-remote-vpc-github-actions"
+  key    = "dev\terraform.tfstate"
   acl    = "private"
 
   tags = {
