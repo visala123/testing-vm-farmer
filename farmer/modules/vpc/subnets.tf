@@ -1,11 +1,11 @@
 resource "aws_subnet" "public-webtier-subnet-1" {
   vpc_id                  = aws_vpc.my_vpc.id
   cidr_block              = var.public-webtier-subnet-1-cidr
-  availability_zone       = "ap-south-1a"
+  availability_zone       = "ap-northeast-2a"
   map_public_ip_on_launch = true
 
   tags = {
-    Name = "farmer-subnet-public1-ap-south-1a"
+    Name = "farmer-subnet-public1-ap-northeast-2a"
   }
 }
 
@@ -14,11 +14,11 @@ resource "aws_subnet" "public-webtier-subnet-1" {
 resource "aws_subnet" "public-webtier-subnet-2" {
   vpc_id                  = aws_vpc.my_vpc.id
   cidr_block              = var.public-webtier-subnet-2-cidr
-  availability_zone       = "ap-south-1b"
+  availability_zone       = "ap-northeast-2b"
   map_public_ip_on_launch = true
 
   tags = {
-    Name = "farmer-subnet-public2-ap-south-1b"
+    Name = "farmer-subnet-public2-ap-northeast-2b"
   }
 }
 
@@ -27,11 +27,11 @@ resource "aws_subnet" "public-webtier-subnet-2" {
 resource "aws_subnet" "private-apptier-subnet-1" {
   vpc_id                  = aws_vpc.my_vpc.id
   cidr_block              = var.private-apptier-subnet-1-cidr
-  availability_zone       = "ap-south-1a"
+  availability_zone       = "ap-northeast-2a"
   map_public_ip_on_launch = false
 
   tags = {
-    Name = "farmer-subnet-private1-ap-south-1a"
+    Name = "farmer-subnet-private1-ap-northeast-2a"
   }
 }
 
@@ -41,10 +41,10 @@ resource "aws_subnet" "private-apptier-subnet-1" {
 resource "aws_subnet" "private-apptier-subnet-2" {
   vpc_id                  = aws_vpc.my_vpc.id
   cidr_block              = var.private-apptier-subnet-2-cidr
-  availability_zone       = "ap-south-1b"
+  availability_zone       = "ap-northeast-2b"
   map_public_ip_on_launch = false
 
   tags = {
-    Name = "farmer-subnet-private2-ap-south-1b"
+    Name = "farmer-subnet-private2-ap-northeast-2b"
   }
 }
