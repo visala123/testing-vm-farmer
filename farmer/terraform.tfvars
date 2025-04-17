@@ -1,0 +1,9 @@
+vpc_cidr = "10.40.0.0/18"
+subnet_cidr = [ "10.40.0.0/22", "10.40.4.0/22","10.40.32.0/22","10.40.36.0/22"]
+aws_region     = "ap-south-1"
+#aws_access_key = "your-aws-access-key"
+#aws_secret_key = "your-aws-secret-key"
+ec2_key_name   = "keypair"
+instance_type  = "t3.medium"
+ami_id         = "ami-084568db4383264d4"  # Ubuntu 20.04 LTS (for us-east-1)
+instance_name  = "Test-Farmer-Public-EC2"
