@@ -19,4 +19,13 @@ module "ec2_instance" {
   vpc_security_group_ids = [module.sg.sg_id]
   
 }
+ resource "aws_s3_bucket" "my_bucket" {
+  bucket = "terraform-backend-remote-vpc-github-actions"
+  acl    = "private"
+
+  tags = {
+    Name        = "terraform-backend-remote-vpc-github-actions"
+    Environment = "Dev"
+  }
+}
 
