@@ -5,12 +5,23 @@ terraform {
       version = "5.93.0"
     }
   }
-  backend "s3" {
-    bucket = "terraform-backend-remote-vpc-github-actions"
-    key    = "dev\terraform.tfstate"
-    region = "us-east-1"
+
+  resource "aws_s3_bucket" "my_bucket" {
+  bucket = "terraform-backend-remote-ec2-github-actions" # Must be globally unique
+   key    = "dev\terraform.tfstate"
+    region = "ap-northeast-2"
+
+  tags = {
+    Name        = "terraform-backend-remote-ec2-github-actions"
+   
   }
 }
+ /* backend "s3" {
+    bucket = "terraform-backend-remote-vpc-github-actions"
+    key    = "dev\terraform.tfstate"
+    region = "ap-northeast-2"
+  }
+}*/
 provider "aws" {
-  region = "ap-south-1"
+  region = "ap-northeast-2"
 }
