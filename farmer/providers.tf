@@ -9,7 +9,7 @@ terraform {
 
   backend "s3" {
     bucket = "terraform-backend-remote-vpc-github-actions"
-    key    = "test\terraform.tfstate"
+    key    = "sonartest\terraform.tfstate"
     region = "us-east-1"
   
 }

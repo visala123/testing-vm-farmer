@@ -58,6 +58,17 @@ resource "aws_security_group" "sg" {
     security_groups  = []
     self             = false
     cidr_blocks      = ["0.0.0.0/0"]
+  },
+  {
+    description      = "tomcat"
+    from_port        = 9000
+    to_port          = 9000
+    protocol         = "tcp"
+    ipv6_cidr_blocks = []
+    prefix_list_ids  = []
+    security_groups  = []
+    self             = false
+    cidr_blocks      = ["0.0.0.0/0"]
   }
   ]
 
